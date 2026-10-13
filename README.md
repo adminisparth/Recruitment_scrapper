@@ -1,5 +1,6 @@
-<<<<<<< HEAD
 # Rock N Roll – Discover Server
+
+An individually developed recruitment scraper. This is a prototype: you describe the kind of person you want to hire and their technical skills in plain words, and it returns a shortlist of candidates from GitHub.
 
 Part 1 of the platform: **"Who should we hire?"**
 Job description → extracted requirements → GitHub candidate search → ranked Top 10 → Top 3 shortlist.
@@ -25,7 +26,3 @@ Docs: http://localhost:8000/docs
 
 Ranking is a skill-overlap heuristic for now; replace `rank_node` with the Dual-Tower model later.
 AI recommends, humans decide.
-=======
-# Recruitment_scrapper
-This is an individually developed recruitment scrapper . it is a prototype version where we can write the type of person we want for recruitment about  his or her technical skills in hum,an words and we can get a shortlisted list from github .
->>>>>>> 160af74a8fb29f866e300c3f6fb295c59ae0bc36
