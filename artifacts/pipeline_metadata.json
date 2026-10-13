@@ -1,0 +1,12 @@
+{
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "analytics_rows": 15841,
+  "datascience_rows": 1602,
+  "jds_rows": 139,
+  "sds_rows": 161,
+  "semantic_weight": 0.55,
+  "skill_weight": 0.25,
+  "experience_weight": 0.1,
+  "role_weight": 0.1,
+  "note": "Weights are baseline engineering values and should be tuned on a validation set."
+}

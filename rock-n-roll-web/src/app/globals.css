@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #f8fafc;
+    --foreground: #090a0f;
+    --card: #ffffff;
+    --card-foreground: #090a0f;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    --border: #e2e8f0;
+    --accent: #4f46e5;
+    --accent-foreground: #ffffff;
+    --ring: #6366f1;
+  }
+
+  .dark {
+    --background: #08090d;
+    --foreground: #f1f3f7;
+    --card: #0f1118;
+    --card-foreground: #f1f3f7;
+    --muted: #151822;
+    --muted-foreground: #8b95a5;
+    --border: #1c2130;
+    --accent: #6366f1;
+    --accent-foreground: #ffffff;
+    --ring: #818cf8;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(140, 150, 170, 0.2);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(140, 150, 170, 0.4);
+}
+
+/* Restrained glow helper */
+.subtle-border {
+  border: 1px solid var(--border);
+}
+
+.surface-card {
+  background-color: var(--card);
+  border: 1px solid var(--border);
+}

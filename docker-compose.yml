@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: recruit_backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - /app/rock-n-roll-web  # Prevents mounting frontend into backend container
+      - /app/.venv            # Ignores local virtualenv inside container
+    env_file:
+      - .env
+    environment:
+      - PORT=8000
+
+  frontend:
+    build:
+      context: ./rock-n-roll-web
+      dockerfile: Dockerfile
+    container_name: recruit_frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    env_file:
+      - ./rock-n-roll-web/.env.local
